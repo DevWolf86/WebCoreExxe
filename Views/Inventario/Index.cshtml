@@ -1,0 +1,37 @@
+﻿@model IEnumerable<LInventario>
+
+<div class="container-fluid">
+    <h3 class="display-3">Modulo Inventario</h3>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Producto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cantidad_producto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vendido)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelitem => item.Producto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.Cantidad_producto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.Vendido)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

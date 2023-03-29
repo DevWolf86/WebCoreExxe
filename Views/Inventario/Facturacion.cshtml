@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Factura>
+
+<div class="container-fluid">
+    <h3 class="display-3">Modulo Facturacion</h3>
+</div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Facturas)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Producto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Impresa)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.Facturas)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.Producto)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.Impresa)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
